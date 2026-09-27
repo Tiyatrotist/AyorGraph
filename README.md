@@ -68,6 +68,20 @@ The example supplements `run_traced` locally; it does not change the library's
 event schema or provide a production telemetry backend. Tests inject a clock to
 check exact durations without sleeps.
 
+## Performance fixture
+
+For a small repeatable construction/execution measurement:
+
+```bash
+pip install -e .
+python examples/performance_fixture.py
+```
+
+The fixture reports graph construction and execution time separately for a fixed
+number of one-node graphs. It intentionally has no pass/fail timing threshold
+and makes no production-performance claim; compare runs under the same
+environment when investigating regressions.
+
 ## Contributing
 
 **You don't need to build the whole framework to contribute.**
